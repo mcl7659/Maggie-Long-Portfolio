@@ -1,0 +1,81 @@
+/* animations.css */
+
+@keyframes rainbowShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .typing-animation {
+    animation: rainbowShift 8s linear infinite;
+    background: linear-gradient(90deg, #f7c3f2, #b5d3f2, #d0f4de, #fde2e4, #e0bbf9);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .typing-animation {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .cursor {
+    animation: blink 1s step-start infinite;
+    font-weight: normal;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+  }
+  
+  section:nth-of-type(2) {
+    animation-delay: 0.3s;
+  }
+  
+  section:nth-of-type(3) {
+    animation-delay: 0.5s;
+  }
+  
+  section:nth-of-type(4) {
+    animation-delay: 0.7s;
+  }
+  
+  header, .logo, nav ul li a {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: 0.1s;
+  }
+  
